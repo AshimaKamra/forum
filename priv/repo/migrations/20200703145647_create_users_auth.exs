@@ -7,7 +7,5 @@ defmodule Forum.Repo.Migrations.CreateUsersAuth do
       add :logout_at, :utc_datetime
       add :user_id, references(:forum_users, on_delete: :delete_all), null: false
     end
-
   end
 end
-

@@ -17,6 +17,7 @@ defmodule Forum.Repo.Migrations.CreateUsers do
       add :follower_id, references(:forum_followers, on_delete: :delete_all)
       add :following_id, references(:forum_followings, on_delete: :delete_all)
     end
+
     create index(:forum_users, [:fullname])
     create index(:forum_users, [:email])
     create unique_index(:forum_users, [:fullname, :email])

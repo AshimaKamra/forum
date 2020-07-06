@@ -4,8 +4,7 @@ defmodule Forum.Repo.Migrations.CreateFollowers do
   def change do
     create table(:forum_follower) do
       add :count, :integer
-      add :user_id, :string
+      add :user_ids, {:array, :integer}
     end
-
   end
 end
